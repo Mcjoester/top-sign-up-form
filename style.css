@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    overflow: none;
+}
+
+.img-container {
+    width: 30%;
+    position: relative;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    top: 175px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 40px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    color: white;
+    margin-left: 10px;
+}
+
+.logo-font {
+    font-family: 'Barlow Condensed', sans-serif;
+    color: white;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-right: 10px;
+    
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    background-color:#202020;
+}
+
+.header {
+    padding-top: 100px;
+    padding-right: 200px;
+    padding-left: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+.header > p  {
+    margin-bottom: 20px;
+    color:#fafafa;
+    opacity: 0.8;
+}
+
+.header p + p {
+    margin-bottom: 50px;
+}
+
+.italic {
+    font-style: italic;
+}
+
+form {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    flex-flow: row wrap;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #fafafa;
+    box-shadow: 0 5px 10px black;
+    padding-left: 50px;
+    padding-right: 150px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.form-header {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.form-row {
+    margin-bottom: 10px;
+    display: flex;
+    flex-flow: column wrap;
+    width: 45%;
+    padding-right: 20px;
+}
+
+label {
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    opacity: 0.8;
+}
+
+ .form-row input {
+    padding: 8px;
+    border-radius: 5px;
+    border:  1px solid rgb(0,0,0,0.9);
+    letter-spacing: 1px;
+}
+
+ .form-row input:focus {
+    outline: none;
+    border: 2px solid green;
+    box-shadow: 0 3px 15px rgb(59, 58, 58);
+}
+
+.form-row.error input {
+    border-color: red;
+}
+
+.form-row.success input {
+    border-color: green;
+}
+
+.form-row small {
+    margin-top: 10px;
+    color: red;
+}
+
+
+.btn {
+    padding-left: 50px;
+    margin-bottom: 20px;
+    width: 250px;
+}
+
+button {
+    padding: 15px 20px;
+    width: 150px;
+    border: none;
+    background-color: rgba(52,98,63, 0.5);
+    color: white;
+    border-radius: 6px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    width: 100%;
+}
+
+button:hover {
+    background-color:#34623f;
+    cursor: pointer;
+    
+
+
+}
+
+.bottom > p {
+    padding-left: 50px;
+    font-family: 'Roboto', sans-serif;
+    color: #fafafa;
+    opacity: 0.8;
+    margin-bottom: 15px;
+}
+
+a {
+    margin-left: 2px;
+    color: #34623f;
+    font-weight: 700;
+    text-decoration: none;
+    opacity: 1;
+}
+
+a:hover {
+     color: rgb(61, 140, 79);
+
+}
+
+@media only screen and (max-width: 1271px) {
+    .logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .overlay {
+        font-size: 35px;
+    }
+ 
+}
+
+@media only screen and (max-width: 1166px) {
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .overlay {
+        font-size: 30px;
+    }
+
+}
+
+@media only screen and (max-width: 1030px) {
+    .container {
+        flex-direction: column;
+        min-height: 100vh;
+        padding: 20px 50px;
+        box-shadow: 0 5px 15px black;
+        background-color: #737d70;
+    }
+
+    .img-container {
+        width: 100%;
+    }
+
+    .background-img {
+        content: url("image-mobile.jpg");
+        height: 100%;
+        width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        vertical-align: middle;
+    }
+
+    .right-side {
+        width: 100%;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        text-align: center;
+    }
+
+    .header {
+        padding: 30px 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .header p + p {
+        margin-bottom: 10px;
+    }
+
+    form {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-left: 0;
+        padding-right: 0;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .form-header {
+        width: 150px;
+    }
+
+    .form-row input::placeholder {
+        text-align: center;
+        letter-spacing: 2px;
+    }
+
+    .bottom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .bottom > p {
+        padding-left: 0;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 0 9rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .container {
+        padding: 0;
+    }
+
+    .background-img {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    .right-side {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .overlay {
+        top: 120px;
+        padding: 0;
+    }
+
+    .form-row input::placeholder {
+        text-align: left;
+        letter-spacing: 3px;
+    }
+
+    .btn {
+        padding: 0 7rem;
+    }
+
+}
+
